@@ -29,17 +29,12 @@ public class GuestSteps extends ScenarioSteps {
     }
 
     @Step
-    public void create_account() {
-         click_sign_in();
-    }
-
-    @Step
-    private void click_sign_in() {
+    private void click_on_SignIn_link() {
         onHomePage().click_sign_in();
     }
 
     @Step
-    public void popup_should_be_present() {
-        onHomePage().assert_popup_janrain();
+    private void guest_should_be_redirects_to_Login_page() {
+
     }
 }

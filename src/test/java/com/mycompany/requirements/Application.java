@@ -11,7 +11,7 @@ import net.thucydides.core.annotations.Feature;
  */
 public class Application {
     @Feature
-    public class Registration{
-        public class EasyRegistration{}
+    public class Global_Header{
+        public class SignIn{}
     }
 }

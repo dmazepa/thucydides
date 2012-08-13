@@ -1,3 +1,4 @@
+/*
 package com.mycompany;
 
 import com.mycompany.requirements.Application;
@@ -30,4 +31,4 @@ public class RegistrationViaJainRainTest {
         guest.create_account();
         guest.popup_should_be_present();
     }
-} 
+} */

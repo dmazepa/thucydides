@@ -1,7 +1,5 @@
 package com.mycompany.pages;
 
-//import net.thucydides.core.annotations.DefaultUrl;
-//import net.thucydides.core.ThucydidesSystemProperty;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +15,7 @@ import org.openqa.selenium.support.FindBy;
 //@DefaultUrl(webdriver.base.url)
 public class HomePage extends PageObject {
 
-    @FindBy(linkText = "Sign in")
+    @FindBy(linkText = "Sign In")
     private WebElement signInLink;
 
     @FindBy(id = "cboxWrapper")

@@ -14,24 +14,20 @@ import org.openqa.selenium.support.FindBy;
  * Time: 14:20
  * To change this template use File | Settings | File Templates.
  */
-//@DefaultUrl("http://localhost:9000")
-public class HomePage extends PageObject {
+public class LoginPage extends PageObject {
 
-    @FindBy(linkText = "Sign In")
-    private WebElement signInLink;
+    @FindBy(id = "email")
+    private WebElement fieldEmail;
 
-    @FindBy(linkText = "My Account")
-    private WebElement myAccountLink;
-
-    public HomePage(WebDriver driver){
+    public LoginPage(WebDriver driver){
         super(driver);
     }
 
-    public void click_sign_in() {
-        element(signInLink).click();
+    public void assertLoginPage() {
+
     }
 
-    public void click_my_account() {
-        element(myAccountLink).click();
+    public void shouldHaveElement() {
+        shouldBeVisible(fieldEmail);
     }
 }

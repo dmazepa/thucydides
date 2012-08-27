@@ -1,6 +1,7 @@
 package com.mycompany.steps;
 
 import com.mycompany.pages.HomePage;
+import com.mycompany.pages.LoginPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
@@ -29,12 +30,18 @@ public class GuestSteps extends ScenarioSteps {
     }
 
     @Step
-    private void click_on_SignIn_link() {
+    public void click_on_SignIn_link() {
         onHomePage().click_sign_in();
     }
 
     @Step
-    private void guest_should_be_redirects_to_Login_page() {
+    public void click_on_my_account_link() {
+        onHomePage().click_my_account();
+    }
 
+    @Step
+    public void guest_should_be_redirects_to_Login_page() {
+        LoginPage page = getPages().currentPageAt(LoginPage.class);
+        page.shouldHaveElement();
     }
 }

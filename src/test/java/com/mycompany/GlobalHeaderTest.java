@@ -1,4 +1,4 @@
-/*
+
 package com.mycompany;
 
 import com.mycompany.requirements.Application;
@@ -10,9 +10,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-@Story(Application.Registration.EasyRegistration.class)
+@Story(Application.Global_Header.SignIn.class)
 @RunWith(ThucydidesRunner.class)
-public class RegistrationViaJainRainTest {
+public class GlobalHeaderTest {
 
     @ManagedPages(defaultUrl = "http://localhost:9000")
     public Pages pages;
@@ -26,9 +26,16 @@ public class RegistrationViaJainRainTest {
 
 
     @Test
-    public void as_guest_i_can_create_account() {
+    public void click_on_Sign_In_link_as_guest_redirects_to_the_Login_Page() {
         guest.is_the_home_page();
-        guest.create_account();
-        guest.popup_should_be_present();
+        guest.click_on_SignIn_link();
+        guest.guest_should_be_redirects_to_Login_page();
     }
-} */
+
+    @Test
+    public void click_on_My_account_link_as_guest_redirects_to_the_Login_Page() {
+        guest.is_the_home_page();
+        guest.click_on_my_account_link();
+        guest.guest_should_be_redirects_to_Login_page();
+    }
+}

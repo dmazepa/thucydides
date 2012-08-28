@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static org.junit.Assert.assertEquals;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,7 +25,6 @@ public class MyAccountPage extends PageObject {
     }
 
     public void assert_created_account() {
-        //assertEquals(getDriver().getCurrentUrl(), "https://bdohdev.lcgosc.com/dev01/customer/account/index/");
         element(blockSuccessMsg).shouldBeVisible();
         element(linkSignOut).shouldBeVisible();
     }

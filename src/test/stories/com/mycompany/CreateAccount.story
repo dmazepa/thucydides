@@ -13,8 +13,11 @@ thucydides.tests_story FromHomePage
             guest.is_the_home_page()
         }
         when "the guest create account",{
-
+            guest.click_on_SignIn_link()
+            guest.click_on_Register_link()
+            guest.fill_fields_and_submit()
         }
-
-        then "he can see My Account Page, as sign in customer"
+        then "he can see My Account Page, as sign in customer", {
+            guest.assert_created_account()
+        }
     }

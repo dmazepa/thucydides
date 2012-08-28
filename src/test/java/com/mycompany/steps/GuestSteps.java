@@ -1,7 +1,9 @@
 package com.mycompany.steps;
 
+import com.mycompany.pages.CreateAnAccountPage;
 import com.mycompany.pages.HomePage;
 import com.mycompany.pages.LoginPage;
+import com.mycompany.pages.MyAccountPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
@@ -24,6 +26,18 @@ public class GuestSteps extends ScenarioSteps {
         return getPages().currentPageAt(HomePage.class);
     }
 
+    private LoginPage onLoginPage() {
+        return getPages().currentPageAt(LoginPage.class);
+    }
+
+    private CreateAnAccountPage onCreateAnAccountPage() {
+        return getPages().currentPageAt(CreateAnAccountPage.class);
+    }
+
+    private MyAccountPage onMyAccountPage() {
+        return getPages().currentPageAt(MyAccountPage.class);
+    }
+
     @Step
     public void is_the_home_page() {
         onHomePage().open();
@@ -41,7 +55,56 @@ public class GuestSteps extends ScenarioSteps {
 
     @Step
     public void guest_should_be_redirects_to_Login_page() {
-        LoginPage page = getPages().currentPageAt(LoginPage.class);
-        page.shouldHaveElement();
+        onLoginPage().shouldHaveElement();
+    }
+
+    @Step
+    public void click_on_Register_link() {
+        onLoginPage().click_register_button();
+    }
+
+    @Step
+    public void fill_field_first_name() {
+        onCreateAnAccountPage().fill_field_first_name();
+    }
+
+    @Step
+    public void fill_field_last_name() {
+        onCreateAnAccountPage().fill_field_last_name();
+    }
+
+    @Step
+    public void fill_field_password() {
+        onCreateAnAccountPage().fill_field_password();
+    }
+
+    @Step
+    public void fill_fields_and_submit() throws InterruptedException {
+        fill_field_first_name();
+        fill_field_last_name();
+        fill_field_email();
+        fill_field_password();
+        fill_field_confirm_password();
+        click_button_submit();
+    }
+
+    @Step
+    private void fill_field_email() {
+         onCreateAnAccountPage().fill_field_email();
+    }
+
+    @Step
+    private void click_button_submit() {
+         onCreateAnAccountPage().click_button_submit();
+    }
+
+    @Step
+    private void fill_field_confirm_password() {
+        onCreateAnAccountPage().fill_field_confirm_password();
+    }
+
+    @Step
+    private void assert_created_account() {
+       onMyAccountPage().assert_created_account();
     }
 }

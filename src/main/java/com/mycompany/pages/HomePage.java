@@ -23,7 +23,7 @@ public class HomePage extends PageObject {
     @FindBy(linkText = "My Account")
     private WebElement myAccountLink;
 
-    public HomePage(WebDriver driver){
+    public HomePage(WebDriver driver) {
         super(driver);
     }
 

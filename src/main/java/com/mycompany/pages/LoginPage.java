@@ -19,7 +19,7 @@ public class LoginPage extends PageObject {
     @FindBy(id = "email")
     private WebElement fieldEmail;
 
-    public LoginPage(WebDriver driver){
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 

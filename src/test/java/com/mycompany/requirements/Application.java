@@ -11,7 +11,13 @@ import net.thucydides.core.annotations.Feature;
  */
 public class Application {
     @Feature
-    public class Global_Header{
-        public class SignIn{}
+    public class Global_Header {
+        public class UsingLinks {}
+        public class MyAccount {}
+    }
+
+    @Feature
+    public class CreateAccount {
+       public class FromHomePage {}
     }
 }

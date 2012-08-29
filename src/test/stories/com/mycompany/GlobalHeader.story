@@ -34,9 +34,7 @@ thucydides.tests_story UsingLinks
 
     scenario "Clicking on My Account link, as customer redirects to the My Account Page", {
         given "customer on home page"
-
         when "the customer click on My Account link"
-
         then "he redirects to the My Account Page"
     }
 

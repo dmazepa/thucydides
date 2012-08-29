@@ -12,12 +12,19 @@ import net.thucydides.core.annotations.Feature;
 public class Application {
     @Feature
     public class Global_Header {
-        public class UsingLinks {}
-        public class MyAccount {}
+        public class UsingLinks {
+        }
     }
 
     @Feature
     public class CreateAccount {
-       public class FromHomePage {}
+        public class FromHomePage {
+        }
+    }
+
+    @Feature
+    public class Checkout {
+        public class AsGuestBundleProduct {
+        }
     }
 }

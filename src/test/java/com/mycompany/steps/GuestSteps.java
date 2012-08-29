@@ -1,9 +1,6 @@
 package com.mycompany.steps;
 
-import com.mycompany.pages.CreateAnAccountPage;
-import com.mycompany.pages.HomePage;
-import com.mycompany.pages.LoginPage;
-import com.mycompany.pages.MyAccountPage;
+import com.mycompany.pages.*;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
@@ -36,6 +33,18 @@ public class GuestSteps extends ScenarioSteps {
 
     private MyAccountPage onMyAccountPage() {
         return getPages().currentPageAt(MyAccountPage.class);
+    }
+
+    private ProductDetailPage onProductDetailPage() {
+        return getPages().currentPageAt(ProductDetailPage.class);
+    }
+
+    private CartPage onCartPage() {
+        return getPages().currentPageAt(CartPage.class);
+    }
+
+    private CheckoutPage onCheckoutPage() {
+        return getPages().currentPageAt(CheckoutPage.class);
     }
 
     @Step
@@ -90,12 +99,12 @@ public class GuestSteps extends ScenarioSteps {
 
     @Step
     private void fill_field_email() {
-         onCreateAnAccountPage().fill_field_email();
+        onCreateAnAccountPage().fill_field_email();
     }
 
     @Step
     private void click_button_submit() {
-         onCreateAnAccountPage().click_button_submit();
+        onCreateAnAccountPage().click_button_submit();
     }
 
     @Step
@@ -105,6 +114,39 @@ public class GuestSteps extends ScenarioSteps {
 
     @Step
     private void assert_created_account() {
-       onMyAccountPage().assert_created_account();
+        onMyAccountPage().assert_created_account();
+    }
+
+    @Step
+    private void is_the_product_page_with_bundle() {
+        onProductDetailPage().open();
+    }
+
+    @Step
+    private void add_to_cart_product() {
+        onProductDetailPage().click_add_to_cart();
+    }
+
+    @Step
+    private void passing_checkout_process() {
+        go_to_checkout_page();
+        fill_first_name_field();
+    }
+
+    private void fill_first_name_field() {
+        onCheckoutPage().fill_firs_name_field();
+    }
+
+    @Step
+    private void go_to_checkout_page() {
+       onCartPage().click_on_checkout_button();
+    }
+
+    @Step
+    private void is_the_order_confirmation_page() {
+    }
+
+    @Step
+    private void assert_product_on_confirmation_page() {
     }
 }

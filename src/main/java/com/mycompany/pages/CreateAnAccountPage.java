@@ -69,6 +69,6 @@ public class CreateAnAccountPage extends PageObject {
         element(fieldEmail).clear();
         Random random = new Random();
         int f = random.nextInt(2000 - 1000 + 1) + 1000;
-        element(fieldEmail).type("tes"+f+"@test.com");
+        element(fieldEmail).type("tes" + f + "@test.com");
     }
 }

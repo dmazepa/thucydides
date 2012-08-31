@@ -1,6 +1,5 @@
 package com.mycompany.pages;
 
-import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,6 +28,6 @@ public class ProductDetailPage extends PageObject {
 
     public void openID(String id) {
         String t = System.getProperty("webdriver.base.url");
-        getDriver().get(t +"/dev01/catalog/product/view/id/"+id);
+        getDriver().get(t + "/dev01/catalog/product/view/id/" + id);
     }
 }

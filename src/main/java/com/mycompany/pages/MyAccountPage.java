@@ -1,6 +1,5 @@
 package com.mycompany.pages;
 
-import net.thucydides.core.annotations.At;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.WebDriver;

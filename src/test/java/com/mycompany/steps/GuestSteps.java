@@ -5,9 +5,6 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-
 
 /**
  * Created with IntelliJ IDEA.
@@ -193,7 +190,7 @@ public class GuestSteps extends ScenarioSteps {
 
     @Step
     public void select_cart_type() {
-         onCheckoutPage().select_cart_type();
+        onCheckoutPage().select_cart_type();
     }
 
     @Step
@@ -228,12 +225,12 @@ public class GuestSteps extends ScenarioSteps {
 
     @Step
     public void select_state() {
-         onCheckoutPage().select_state();
+        onCheckoutPage().select_state();
     }
 
     @Step
     public void fill_city_field() {
-         onCheckoutPage().fill_city_field();
+        onCheckoutPage().fill_city_field();
     }
 
     @Step
@@ -267,7 +264,7 @@ public class GuestSteps extends ScenarioSteps {
 
     @Step
     public void go_to_checkout_page() {
-       onCartPage().click_on_checkout_button();
+        onCartPage().click_on_checkout_button();
     }
 
     @Step

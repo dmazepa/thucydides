@@ -132,9 +132,9 @@
                     <storyReport>target/easyb/easyb.html</storyReport>
                     <easybTestDirectory>src/test/stories</easybTestDirectory>
                     <jvmArguments>
-                    -Xmx512m -Dwebdriver.driver=${webdriver.driver}
-                    -Xmx512m -Dwebdriver.base.url=${webdriver.base.url}
-                    -Xmx512m -Dthucydides.only.save.failing.screenshots=${thucydides.only.save.failing.screenshots}
+                        -Xmx512m -Dwebdriver.driver=${webdriver.driver}
+                        -Xmx512m -Dwebdriver.base.url=${webdriver.base.url}
+                        -Xmx512m -Dthucydides.only.save.failing.screenshots=${thucydides.only.save.failing.screenshots}
                     </jvmArguments>
                 </configuration>
             </plugin>

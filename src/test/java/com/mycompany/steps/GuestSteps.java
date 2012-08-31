@@ -5,6 +5,10 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+
+
 /**
  * Created with IntelliJ IDEA.
  * User: dmazepa
@@ -19,32 +23,36 @@ public class GuestSteps extends ScenarioSteps {
         super(pages);
     }
 
-    private HomePage onHomePage() {
+    public HomePage onHomePage() {
         return getPages().currentPageAt(HomePage.class);
     }
 
-    private LoginPage onLoginPage() {
+    public LoginPage onLoginPage() {
         return getPages().currentPageAt(LoginPage.class);
     }
 
-    private CreateAnAccountPage onCreateAnAccountPage() {
+    public CreateAnAccountPage onCreateAnAccountPage() {
         return getPages().currentPageAt(CreateAnAccountPage.class);
     }
 
-    private MyAccountPage onMyAccountPage() {
+    public MyAccountPage onMyAccountPage() {
         return getPages().currentPageAt(MyAccountPage.class);
     }
 
-    private ProductDetailPage onProductDetailPage() {
+    public ProductDetailPage onProductDetailPage() {
         return getPages().currentPageAt(ProductDetailPage.class);
     }
 
-    private CartPage onCartPage() {
+    public CartPage onCartPage() {
         return getPages().currentPageAt(CartPage.class);
     }
 
-    private CheckoutPage onCheckoutPage() {
+    public CheckoutPage onCheckoutPage() {
         return getPages().currentPageAt(CheckoutPage.class);
+    }
+
+    public OrderConfirmationPage onOrderConfirmationPage() {
+        return getPages().currentPageAt(OrderConfirmationPage.class);
     }
 
     @Step
@@ -88,7 +96,7 @@ public class GuestSteps extends ScenarioSteps {
     }
 
     @Step
-    public void fill_fields_and_submit() throws InterruptedException {
+    public void fill_fields_and_submit() {
         fill_field_first_name();
         fill_field_last_name();
         fill_field_email();
@@ -98,55 +106,181 @@ public class GuestSteps extends ScenarioSteps {
     }
 
     @Step
-    private void fill_field_email() {
+    public void fill_field_email() {
         onCreateAnAccountPage().fill_field_email();
     }
 
     @Step
-    private void click_button_submit() {
+    public void click_button_submit() {
         onCreateAnAccountPage().click_button_submit();
     }
 
     @Step
-    private void fill_field_confirm_password() {
+    public void fill_field_confirm_password() {
         onCreateAnAccountPage().fill_field_confirm_password();
     }
 
     @Step
-    private void assert_created_account() {
+    public void assert_created_account() {
         onMyAccountPage().assert_created_account();
     }
 
     @Step
-    private void is_the_product_page_with_bundle() {
-        onProductDetailPage().open();
+    public void is_the_product_page_id(String id) {
+        onProductDetailPage().openID(id);
     }
 
     @Step
-    private void add_to_cart_product() {
+    public void add_to_cart_product() {
         onProductDetailPage().click_add_to_cart();
     }
 
     @Step
-    private void passing_checkout_process() {
+    public void passing_checkout_process() {
         go_to_checkout_page();
+        choose_checkout_as_guest();
+        click_button_continue();
         fill_first_name_field();
-    }
-
-    private void fill_first_name_field() {
-        onCheckoutPage().fill_firs_name_field();
+        fill_last_name_field();
+        fill_email_field();
+        fill_address_field();
+        fill_city_field();
+        select_state();
+        fill_postal_code_field();
+        fill_telephone_field();
+        click_button_continue1();
+        click_button_continue2();
+        click_input_credit_cart();
+        fill_cart_name_field();
+        select_cart_type();
+        fill_cart_number_field();
+        select_month();
+        select_year();
+        fill_verification_number_field();
+        click_button_continue3();
+        click_button_place_order();
     }
 
     @Step
-    private void go_to_checkout_page() {
+    public void click_button_place_order() {
+        onCheckoutPage().click_button_place_order();
+    }
+
+    @Step
+    public void click_button_continue3() {
+        onCheckoutPage().click_button_continue3();
+    }
+
+    @Step
+    public void fill_verification_number_field() {
+        onCheckoutPage().fill_verification_number_field();
+    }
+
+    @Step
+    public void select_year() {
+        onCheckoutPage().select_year();
+    }
+
+    @Step
+    public void select_month() {
+        onCheckoutPage().select_month();
+    }
+
+    @Step
+    public void fill_cart_number_field() {
+        onCheckoutPage().fill_cart_number_field();
+    }
+
+    @Step
+    public void select_cart_type() {
+         onCheckoutPage().select_cart_type();
+    }
+
+    @Step
+    public void fill_cart_name_field() {
+        onCheckoutPage().fill_cart_name_field();
+    }
+
+    @Step
+    public void click_input_credit_cart() {
+        onCheckoutPage().click_on_credit_cart_input();
+    }
+
+    @Step
+    public void click_button_continue2() {
+        onCheckoutPage().click_on_continue_button2();
+    }
+
+    @Step
+    public void click_button_continue1() {
+        onCheckoutPage().click_on_continue_button1();
+    }
+
+    @Step
+    public void fill_telephone_field() {
+        onCheckoutPage().fill_telephone_field();
+    }
+
+    @Step
+    public void fill_postal_code_field() {
+        onCheckoutPage().fill_postal_code_field();
+    }
+
+    @Step
+    public void select_state() {
+         onCheckoutPage().select_state();
+    }
+
+    @Step
+    public void fill_city_field() {
+         onCheckoutPage().fill_city_field();
+    }
+
+    @Step
+    public void fill_address_field() {
+        onCheckoutPage().fill_address_field();
+    }
+
+    @Step
+    public void fill_email_field() {
+        onCheckoutPage().fill_email_field();
+    }
+
+    @Step
+    public void fill_last_name_field() {
+        onCheckoutPage().fill_last_name_field();
+    }
+
+    @Step
+    public void click_button_continue() {
+        onCheckoutPage().click_on_continue_button();
+    }
+
+    @Step
+    public void choose_checkout_as_guest() {
+        onCheckoutPage().choose_checkout_as_guest();
+    }
+
+    public void fill_first_name_field() {
+        onCheckoutPage().fill_first_name_field();
+    }
+
+    @Step
+    public void go_to_checkout_page() {
        onCartPage().click_on_checkout_button();
     }
 
     @Step
-    private void is_the_order_confirmation_page() {
+    public void is_the_order_confirmation_page() {
+        onOrderConfirmationPage().assertOrderConfirmationPage();
     }
 
     @Step
-    private void assert_product_on_confirmation_page() {
+    public void assert_product_on_confirmation_page() {
+        assert_success_messages();
+    }
+
+    public void assert_success_messages() {
+        onOrderConfirmationPage().assert_success_messages();
     }
 }

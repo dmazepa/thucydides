@@ -1,6 +1,5 @@
 package com.mycompany.pages;
 
-import net.thucydides.core.annotations.At;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.WebDriver;
@@ -17,17 +16,18 @@ import static org.hamcrest.Matchers.is;
  * Time: 14:20
  * To change this template use File | Settings | File Templates.
  */
-@DefaultUrl("http://localhost:9000/dev01/checkout/cart/")
-public class CartPage extends PageObject {
+@DefaultUrl("http://localhost:9000/dev01/checkout/onepage/success/")
+public class OrderConfirmationPage extends PageObject {
 
-    public CartPage(WebDriver driver) {
+    public OrderConfirmationPage(WebDriver driver) {
         super(driver);
     }
 
-    @FindBy(xpath = "//a[@class='top-link-checkout']")
-    private WebElement buttonCheckout;
+    public void assertOrderConfirmationPage() {
+        waitForTitleToAppear("Magento Enterprise Edition");
+        assertThat(getDriver().getCurrentUrl(), is("https://bdohdev.lcgosc.com/dev01/checkout/onepage/success/"));
+    }
 
-    public void click_on_checkout_button() {
-        element(buttonCheckout).click();
+    public void assert_success_messages() {
     }
 }

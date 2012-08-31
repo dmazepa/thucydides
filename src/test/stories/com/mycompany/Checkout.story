@@ -10,7 +10,7 @@ thucydides.tests_story AsGuestBundleProduct
 
     scenario "As guest I can buy bundle product", {
         given "guest on PDP",{
-            guest.is_the_product_page_with_bundle()
+            guest.is_the_product_page_id "91"
         }
         when "the guest add to cart product",{
             guest.add_to_cart_product()

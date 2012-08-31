@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <thucydides.version>0.8.31</thucydides.version>
+        <thucydides.version>0.9.17</thucydides.version>
         <webdriver.driver>firefox</webdriver.driver>
     </properties>
 
@@ -77,6 +77,7 @@
                     <systemPropertyVariables>
                         <webdriver.driver>${webdriver.driver}</webdriver.driver>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
+                        <thucydides.only.save.failing.screenshots>true</thucydides.only.save.failing.screenshots>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
@@ -94,6 +95,7 @@
                     <systemPropertyVariables>
                         <webdriver.driver>${webdriver.driver}</webdriver.driver>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
+                        <thucydides.only.save.failing.screenshots>true</thucydides.only.save.failing.screenshots>
                     </systemPropertyVariables>
                 </configuration>
                 <executions>
@@ -129,8 +131,11 @@
                     <storyType>html</storyType>
                     <storyReport>target/easyb/easyb.html</storyReport>
                     <easybTestDirectory>src/test/stories</easybTestDirectory>
-                    <jvmArguments>-Xmx512m -Dwebdriver.driver=${webdriver.driver}</jvmArguments>
-                    <jvmArguments>-Xmx512m -Dwebdriver.base.url=${webdriver.base.url}</jvmArguments>
+                    <jvmArguments>
+                    -Xmx512m -Dwebdriver.driver=${webdriver.driver}
+                    -Xmx512m -Dwebdriver.base.url=${webdriver.base.url}
+                    -Xmx512m -Dthucydides.only.save.failing.screenshots=${thucydides.only.save.failing.screenshots}
+                    </jvmArguments>
                 </configuration>
             </plugin>
             <plugin>

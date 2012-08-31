@@ -16,7 +16,6 @@ import org.openqa.selenium.support.FindBy;
  * To change this template use File | Settings | File Templates.
  */
 @DefaultUrl("http://localhost:9000/dev01/customer/account/index/")
-@At("https://bdohdev.lcgosc.com/dev01/customer/account/index/")
 
 public class MyAccountPage extends PageObject {
 

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+
 /**
  * Created with IntelliJ IDEA.
  * User: dmazepa
@@ -13,7 +14,6 @@ import org.openqa.selenium.support.FindBy;
  * Time: 14:20
  * To change this template use File | Settings | File Templates.
  */
-@DefaultUrl("http://localhost:9000/dev01/catalog/product/view/id/91")
 public class ProductDetailPage extends PageObject {
 
     public ProductDetailPage(WebDriver driver) {
@@ -25,5 +25,10 @@ public class ProductDetailPage extends PageObject {
 
     public void click_add_to_cart() {
         element(buttonAddToCart).click();
+    }
+
+    public void openID(String id) {
+        String t = System.getProperty("webdriver.base.url");
+        getDriver().get(t +"/dev01/catalog/product/view/id/"+id);
     }
 }

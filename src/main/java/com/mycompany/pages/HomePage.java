@@ -2,9 +2,13 @@ package com.mycompany.pages;
 
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,21 +20,22 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("http://localhost:9000/dev01/")
 public class HomePage extends PageObject {
 
-    @FindBy(linkText = "Sign In")
-    private WebElement signInLink;
-
-    @FindBy(linkText = "My Account")
-    private WebElement myAccountLink;
-
     public HomePage(WebDriver driver) {
         super(driver);
     }
 
-    public void click_sign_in() {
-        element(signInLink).click();
-    }
+    @FindBy(xpath = "//div[@class='slides_container']//a[1]")
+    private WebElement sliderImage1;
 
-    public void click_my_account() {
-        element(myAccountLink).click();
+    @FindBy(xpath = "//div[@class='slides_container']//a[2]")
+    private WebElement sliderImage2;
+
+    public void assert_sliding_of_promotional() throws InterruptedException {
+        element(sliderImage1).waitUntilVisible();
+        element(sliderImage2).shouldNotBeVisible();
+        element(sliderImage1).shouldBeVisible();
+        Thread.sleep(5000);
+        element(sliderImage1).shouldNotBeVisible();
+        element(sliderImage2).shouldBeVisible();
     }
 }

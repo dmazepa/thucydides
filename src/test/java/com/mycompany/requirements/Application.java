@@ -27,4 +27,10 @@ public class Application {
         public class AsGuestBundleProduct {
         }
     }
+
+    @Feature
+    public class ShopFlow {
+        public class RotatingCarousel {
+        }
+    }
 }

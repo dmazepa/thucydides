@@ -24,6 +24,10 @@ public class GuestSteps extends ScenarioSteps {
         return getPages().currentPageAt(HomePage.class);
     }
 
+    public GlobalHeaderFooterPage onGlobalHeaderFooterPage() {
+        return getPages().currentPageAt(GlobalHeaderFooterPage.class);
+    }
+
     public LoginPage onLoginPage() {
         return getPages().currentPageAt(LoginPage.class);
     }
@@ -59,12 +63,12 @@ public class GuestSteps extends ScenarioSteps {
 
     @Step
     public void click_on_SignIn_link() {
-        onHomePage().click_sign_in();
+        onGlobalHeaderFooterPage().click_sign_in();
     }
 
     @Step
     public void click_on_my_account_link() {
-        onHomePage().click_my_account();
+        onGlobalHeaderFooterPage().click_my_account();
     }
 
     @Step
@@ -279,5 +283,10 @@ public class GuestSteps extends ScenarioSteps {
 
     public void assert_success_messages() {
         onOrderConfirmationPage().assert_success_messages();
+    }
+
+    @Step
+    public void assert_sliding_of_promotional() throws InterruptedException {
+        onHomePage().assert_sliding_of_promotional();
     }
 }

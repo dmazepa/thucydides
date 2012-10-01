@@ -24,6 +24,10 @@ public class GuestSteps extends ScenarioSteps {
         return getPages().currentPageAt(HomePage.class);
     }
 
+    public CLPage onCLPage() {
+        return getPages().currentPageAt(CLPage.class);
+    }
+
     public GlobalHeaderFooterPage onGlobalHeaderFooterPage() {
         return getPages().currentPageAt(GlobalHeaderFooterPage.class);
     }
@@ -59,6 +63,11 @@ public class GuestSteps extends ScenarioSteps {
     @Step
     public void is_the_home_page() {
         onHomePage().open();
+    }
+
+    @Step
+    public void is_the_CLP() {
+        onCLPage().open();
     }
 
     @Step
@@ -288,5 +297,10 @@ public class GuestSteps extends ScenarioSteps {
     @Step
     public void assert_sliding_of_promotional() throws InterruptedException {
         onHomePage().assert_sliding_of_promotional();
+    }
+
+    @Step
+    public void assert_12_products() {
+        onCLPage().assert_12_products();
     }
 }

@@ -30,7 +30,7 @@ public class Application {
 
     @Feature
     public class ShopFlow {
-        public class RotatingCarousel {
-        }
+        public class RotatingCarousel {}
+        public class QtyOfProductsOnCLP {}
     }
 }

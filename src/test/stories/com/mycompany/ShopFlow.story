@@ -17,3 +17,13 @@ thucydides.tests_story RotatingCarousel
             guest.assert_sliding_of_promotional()
         }
     }
+
+     scenario "12 products should shows on CLP default",{
+            given "guest on Category Landing Page",{
+                guest.is_the_CLP()
+            }
+            when "do nothing"
+            then "12 products shows by default",{
+                guest.assert_12_products()
+            }
+        }

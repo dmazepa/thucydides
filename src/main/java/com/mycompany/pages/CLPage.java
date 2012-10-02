@@ -21,6 +21,8 @@ import static org.hamcrest.Matchers.is;
 @DefaultUrl("http://localhost:9000/dev01/baby-shower/baby-shower-themes.html")
 public class CLPage extends PageObject {
 
+    
+
     public CLPage(WebDriver driver) {
         super(driver);
     }
@@ -29,7 +31,7 @@ public class CLPage extends PageObject {
     private WebElement selectItemsPerPage;
 
     public void assert_12_products() {
-       assertThat(element(selectItemsPerPage).getText(),is("12"));
-       assertThat(getDriver().findElements(By.xpath("//h2[@class='product-name']")).size(), greaterThanOrEqualTo(12));
+       assertThat(element(selectItemsPerPage).getSelectedVisibleTextValue(),is("12"));
+       assert(getDriver().findElements(By.xpath("//h2[@class='product-name']")).size()<=12);
     }
 }

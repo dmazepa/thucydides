@@ -77,8 +77,7 @@
                     <systemPropertyVariables>
                         <webdriver.driver>${webdriver.driver}</webdriver.driver>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
-                        <maven.test.failure.ignore>true</maven.test.failure.ignore>
-                        <thucydides.only.save.failing.screenshots>true</thucydides.only.save.failing.screenshots>
+                        <thucydides.only.save.failing.screenshots>${thucydides.only.save.failing.screenshots}</thucydides.only.save.failing.screenshots>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
@@ -96,8 +95,7 @@
                     <systemPropertyVariables>
                         <webdriver.driver>${webdriver.driver}</webdriver.driver>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
-                        <maven.test.failure.ignore>true</maven.test.failure.ignore>
-                        <thucydides.only.save.failing.screenshots>true</thucydides.only.save.failing.screenshots>
+                        <thucydides.only.save.failing.screenshots>${thucydides.only.save.failing.screenshots}</thucydides.only.save.failing.screenshots>
                     </systemPropertyVariables>
                 </configuration>
                 <executions>

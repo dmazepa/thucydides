@@ -7,7 +7,6 @@ import org.openqa.selenium.internal.Locatable;
 import org.openqa.selenium.support.FindBy;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.greaterThanOrEqualTo;
 import static org.hamcrest.Matchers.is;
 
 /**
@@ -20,7 +19,6 @@ import static org.hamcrest.Matchers.is;
 @DefaultUrl("http://localhost:9000/dev01/baby-shower/baby-shower-themes.html")
 public class CLPage extends PageObject {
 
-    
 
     public CLPage(WebDriver driver) {
         super(driver);
@@ -39,8 +37,8 @@ public class CLPage extends PageObject {
     private WebElement popUpQuickView;
 
     public void assert_12_products() {
-       assertThat(element(selectItemsPerPage).getSelectedVisibleTextValue(),is("12"));
-       assert(getDriver().findElements(By.xpath("//h2[@class='product-name']")).size()<=12);
+        assertThat(element(selectItemsPerPage).getSelectedVisibleTextValue(), is("12"));
+        assert (getDriver().findElements(By.xpath("//h2[@class='product-name']")).size() <= 12);
     }
 
     public void move_mouse_to_the_first_product_image() {

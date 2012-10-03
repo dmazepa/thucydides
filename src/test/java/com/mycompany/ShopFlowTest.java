@@ -35,7 +35,7 @@ public class ShopFlowTest {
     }
 
     @Test
-    public void products_should_shows_on_CLP_default(){
+    public void products_should_shows_on_CLP_default() {
         //given
         steps.is_the_CLP();
         //when
@@ -44,7 +44,7 @@ public class ShopFlowTest {
     }
 
     @Test
-    public void quick_view_pop_up(){
+    public void quick_view_pop_up() {
         //given
         steps.is_the_CLP();
         //when

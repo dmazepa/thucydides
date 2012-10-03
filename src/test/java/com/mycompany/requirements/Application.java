@@ -30,8 +30,13 @@ public class Application {
 
     @Feature
     public class ShopFlow {
-        public class RotatingCarousel {}
-        public class QtyOfProductsOnCLP {}
-        public class QuickViewPopUp {}
+        public class RotatingCarousel {
+        }
+
+        public class QtyOfProductsOnCLP {
+        }
+
+        public class QuickViewPopUp {
+        }
     }
 }

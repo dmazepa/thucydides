@@ -32,5 +32,6 @@ public class Application {
     public class ShopFlow {
         public class RotatingCarousel {}
         public class QtyOfProductsOnCLP {}
+        public class QuickViewPopUp {}
     }
 }

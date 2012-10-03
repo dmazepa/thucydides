@@ -303,4 +303,24 @@ public class GuestSteps extends ScenarioSteps {
     public void assert_12_products() {
         onCLPage().assert_12_products();
     }
+
+    @Step
+    public void move_mouse_to_the_first_product_image() {
+        onCLPage().move_mouse_to_the_first_product_image();
+    }
+
+    @Step
+    public void assert_quick_view_button_appears() {
+        onCLPage().assert_quick_view_button_appears();
+    }
+
+    @Step
+    public void click_on_quick_view_button() {
+        onCLPage().click_on_quick_view_button();
+    }
+
+    @Step
+    public void assert_pop_up_window_appears() {
+        onCLPage().assert_pop_up_window_appears();
+    }
 }

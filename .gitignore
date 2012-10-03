@@ -6,3 +6,4 @@ target
 *.ipr
 *.iws
 GlobalHeaderTest.java
+test/stories

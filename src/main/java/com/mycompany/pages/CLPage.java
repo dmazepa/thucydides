@@ -9,14 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-/**
- * Created with IntelliJ IDEA.
- * User: dmazepa
- * Date: 01.08.12
- * Time: 14:20
- * To change this template use File | Settings | File Templates.
- */
-@DefaultUrl("http://localhost:9000/dev01/baby-shower/baby-shower-themes.html")
+
+@DefaultUrl("http://localhost:9000/dev01/baby-shower/baby-shower-invitations.html")
 public class CLPage extends PageObject {
 
 

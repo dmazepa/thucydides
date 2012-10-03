@@ -51,6 +51,7 @@ public class ShopFlowTest {
         steps.move_mouse_to_the_first_product_image();
         //then
         steps.assert_quick_view_button_appears();
+        steps.click_on_quick_view_button();
         //and
         steps.assert_pop_up_window_appears();
     }

@@ -23,8 +23,9 @@ public class ShopFlowTest {
     @Steps
     public GuestSteps steps;
 
+
     @Test
-    @WithDriver("iexplorer")
+    @WithDriver("chrome")
     public void slider() throws InterruptedException {
         //given
         steps.is_the_home_page();

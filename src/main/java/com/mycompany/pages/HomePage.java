@@ -2,9 +2,13 @@ package com.mycompany.pages;
 
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import static org.hamcrest.MatcherAssert.*;
+import static org.hamcrest.core.StringContains.containsString;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,18 +24,17 @@ public class HomePage extends PageObject {
         super(driver);
     }
 
-    @FindBy(xpath = "//div[@class='slides_container']//a[1]")
+    @FindBy(xpath = "//div[@id='slides']/div[2]/div/a[1]")
     private WebElement sliderImage1;
 
-    @FindBy(xpath = "//div[@class='slides_container']//a[2]")
+    @FindBy(xpath = "//div[@id='slides']/div[2]/div/a[2]")
     private WebElement sliderImage2;
 
     public void assert_sliding_of_promotional() throws InterruptedException {
-        element(sliderImage1).waitUntilVisible();
-        element(sliderImage2).shouldNotBeVisible();
-        element(sliderImage1).shouldBeVisible();
-        Thread.sleep(5000);
-        element(sliderImage1).shouldNotBeVisible();
-        element(sliderImage2).shouldBeVisible();
+        assertThat(sliderImage1.getAttribute("style"), containsString("none"));
+        assertThat(sliderImage2.getAttribute("style"), containsString("block"));
+        Thread.sleep(4000);
+        assertThat(sliderImage2.getAttribute("style"), containsString("none"));
+        assertThat(sliderImage1.getAttribute("style"), containsString("block"));
     }
 }

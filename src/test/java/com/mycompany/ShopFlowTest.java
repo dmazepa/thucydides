@@ -25,7 +25,7 @@ public class ShopFlowTest {
 
 
     @Test
-    @WithDriver("chrome")
+    //@WithDriver("firefox")
     public void slider() throws InterruptedException {
         //given
         steps.is_the_home_page();

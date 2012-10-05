@@ -31,8 +31,8 @@ public class HomePage extends PageObject {
     private WebElement sliderImage2;
 
     public void assert_sliding_of_promotional() throws InterruptedException {
-        assertThat(sliderImage1.getAttribute("style"), containsString("none"));
-        assertThat(sliderImage2.getAttribute("style"), containsString("block"));
+        assertThat(sliderImage2.getAttribute("style"), containsString("none"));
+        assertThat(sliderImage1.getAttribute("style"), containsString("block"));
         Thread.sleep(4000);
         assertThat(sliderImage2.getAttribute("style"), containsString("none"));
         assertThat(sliderImage1.getAttribute("style"), containsString("block"));

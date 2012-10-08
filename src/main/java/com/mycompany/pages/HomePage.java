@@ -24,10 +24,10 @@ public class HomePage extends PageObject {
         super(driver);
     }
 
-    @FindBy(xpath = "//div[@id='slides']/div[2]/div/a[1]")
+    @FindBy(xpath = "//div[@id='slides']/div[2]/div/a")
     private WebElement sliderImage1;
 
-    @FindBy(xpath = "//div[@id='slides']/div[2]/div/a[2]")
+    @FindBy(css = "//div[@class='tlImageContainer']")
     private WebElement sliderImage2;
 
     public void assert_sliding_of_promotional() throws InterruptedException {

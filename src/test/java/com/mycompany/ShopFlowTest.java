@@ -14,7 +14,7 @@ import org.openqa.selenium.WebDriver;
 @RunWith(ThucydidesRunner.class)
 public class ShopFlowTest {
 
-    @Managed
+    @Managed (uniqueSession=true)
     public WebDriver webdriver;
 
     @ManagedPages(defaultUrl = "http://localhost:9000/dev01/")

@@ -37,12 +37,12 @@ public class HomePage extends PageObject {
         element(buttonPrevSlider).click();
         System.out.println(sliderImage1.getAttribute("style"));
         System.out.println(sliderImage2.getAttribute("style"));
-        assertThat(sliderImage1.getAttribute("style"), containsString("block"));
-        assertThat(sliderImage2.getAttribute("style"), containsString("none"));
+        assertThat(sliderImage2.getAttribute("style"), containsString("block"));
+        assertThat(sliderImage1.getAttribute("style"), containsString("none"));
         Thread.sleep(4000);
         System.out.println(sliderImage1.getAttribute("style"));
         System.out.println(sliderImage2.getAttribute("style"));
-        assertThat(sliderImage2.getAttribute("style"), containsString("none"));
-        assertThat(sliderImage1.getAttribute("style"), containsString("block"));
+        assertThat(sliderImage1.getAttribute("style"), containsString("none"));
+        assertThat(sliderImage2.getAttribute("style"), containsString("block"));
     }
 }

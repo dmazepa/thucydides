@@ -30,9 +30,6 @@ public class CLPage extends PageObject {
     @FindBy(xpath = "//div[@class='product-view']")
     private WebElement popUpQuickView;
 
-    @FindBy(xpath = "//div[@class='preloader-mask']")
-    private WebElement preloaderQuickView;
-
     public void assert_12_products() {
         assertThat(element(selectItemsPerPage).getSelectedVisibleTextValue(), is("12"));
         assert (getDriver().findElements(By.xpath("//h2[@class='product-name']")).size() <= 12);
@@ -53,6 +50,6 @@ public class CLPage extends PageObject {
     }
 
     public void assert_pop_up_window_appears() {
-        element(popUpQuickView).waitUntilVisible();
+        element(popUpQuickView).shouldBeVisible();
     }
 }

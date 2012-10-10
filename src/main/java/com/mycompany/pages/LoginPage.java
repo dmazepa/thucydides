@@ -23,6 +23,15 @@ public class LoginPage extends PageObject {
     @FindBy(xpath = "//div[@class='buttons-set']/button")
     private WebElement buttonRegister;
 
+    @FindBy(id = "email")
+    private WebElement inputEmail;
+
+    @FindBy(id = "pass")
+    private WebElement inputPassword;
+
+    @FindBy(id = "send2")
+    private WebElement buttonSignIn;
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -33,5 +42,11 @@ public class LoginPage extends PageObject {
 
     public void click_register_button() {
         element(buttonRegister).click();
+    }
+
+    public void type_correct_login_password_and_submit() {
+        element(inputEmail).type("test2@speroteck.com");
+        element(inputPassword).type("testthis");
+        element(buttonSignIn).click();
     }
 }

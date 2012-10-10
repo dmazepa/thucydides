@@ -32,4 +32,9 @@ public class MyAccountPage extends PageObject {
 
     @FindBy(linkText = "Sign Out")
     private WebElement linkSignOut;
+
+    public void assert_on_my_account_page() {
+        assert linkSignOut.isDisplayed();
+
+    }
 }

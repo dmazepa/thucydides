@@ -14,9 +14,9 @@ import net.thucydides.core.steps.ScenarioSteps;
  * To change this template use File | Settings | File Templates.
  */
 
-public class GuestSteps extends ScenarioSteps {
+public class GlobalSteps extends ScenarioSteps {
 
-    public GuestSteps(Pages pages) {
+    public GlobalSteps(Pages pages) {
         super(pages);
     }
 
@@ -322,5 +322,17 @@ public class GuestSteps extends ScenarioSteps {
     @Step
     public void assert_pop_up_window_appears() {
         onCLPage().assert_pop_up_window_appears();
+    }
+
+    @Step
+    public void sign_in() {
+        onGlobalHeaderFooterPage().click_sign_in();
+        onLoginPage().type_correct_login_password_and_submit();
+    }
+
+    @Step
+    public void assert_customer_redirects_to_my_account_page() {
+        onMyAccountPage().assert_on_my_account_page();
+        getDriver().getPageSource().contains("test2@speroteck.com");
     }
 }

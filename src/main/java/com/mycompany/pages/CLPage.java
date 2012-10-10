@@ -53,7 +53,6 @@ public class CLPage extends PageObject {
     }
 
     public void assert_pop_up_window_appears() {
-        assert popUpQuickView.isDisplayed();
-        element(popUpQuickView).shouldBeVisible();
+        element(popUpQuickView).waitUntilVisible();
     }
 }

@@ -2,7 +2,6 @@ package com.mycompany.pages;
 
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,13 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.core.StringContains.containsString;
 
-/**
- * Created with IntelliJ IDEA.
- * User: dmazepa
- * Date: 01.08.12
- * Time: 14:20
- * To change this template use File | Settings | File Templates.
- */
 @DefaultUrl("http://localhost:9000/dev01/")
 public class HomePage extends PageObject {
 
@@ -33,8 +25,7 @@ public class HomePage extends PageObject {
     @FindBy(xpath = "//div[@id='slides']/div[2]/div/a[2]")
     private WebElement sliderImage2;
 
-    @FindBy(id = "cartHeader")
-    private WebElement cart;
+
 
     public void assert_sliding_of_promotional() throws InterruptedException {
         element(buttonPrevSlider).click();
@@ -47,9 +38,5 @@ public class HomePage extends PageObject {
         System.out.println(sliderImage2.getAttribute("style"));
         assertThat(sliderImage1.getAttribute("style"), containsString("none"));
         assertThat(sliderImage2.getAttribute("style"), containsString("block"));
-    }
-
-    public void click_on_my_cart() {
-        element(cart).click();
     }
 }

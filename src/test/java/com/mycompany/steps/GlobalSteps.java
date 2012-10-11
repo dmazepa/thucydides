@@ -332,7 +332,7 @@ public class GlobalSteps extends ScenarioSteps {
 
     @Step
     public void click_on_cart() {
-        onHomePage().click_on_my_cart();
+        onGlobalHeaderFooterPage().click_on_my_cart();
     }
 
     @Step
@@ -347,6 +347,6 @@ public class GlobalSteps extends ScenarioSteps {
 
     @Step
     public void roll_over_on_cart() {
-
+        onGlobalHeaderFooterPage().roll_over_on_cart();
     }
 }

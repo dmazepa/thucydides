@@ -1,22 +1,21 @@
 package com.mycompany.pages;
 
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.HasInputDevices;
+import org.openqa.selenium.Mouse;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.internal.Locatable;
 import org.openqa.selenium.support.FindBy;
 
-/**
- * Created with IntelliJ IDEA.
- * User: dmazepa
- * Date: 01.08.12
- * Time: 14:20
- * To change this template use File | Settings | File Templates.
- */
 public class GlobalHeaderFooterPage extends PageObject {
 
     public GlobalHeaderFooterPage(WebDriver driver) {
         super(driver);
     }
+
+    @FindBy(id = "cartHeader")
+    private WebElement cart;
 
     @FindBy(linkText = "Sign In")
     private WebElement signInLink;
@@ -30,5 +29,15 @@ public class GlobalHeaderFooterPage extends PageObject {
 
     public void click_my_account() {
         element(myAccountLink).click();
+    }
+
+    public void click_on_my_cart() {
+        element(cart).click();
+    }
+
+    public void roll_over_on_cart() {
+        Locatable hoverItem = (Locatable) cart;
+        Mouse mouse = ((HasInputDevices) getDriver()).getMouse();
+        mouse.mouseMove(hoverItem.getCoordinates());
     }
 }

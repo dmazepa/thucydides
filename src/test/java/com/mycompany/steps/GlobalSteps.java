@@ -5,6 +5,9 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
 public class GlobalSteps extends ScenarioSteps {
 
     public GlobalSteps(Pages pages) {
@@ -324,7 +327,7 @@ public class GlobalSteps extends ScenarioSteps {
     @Step
     public void assert_customer_redirects_to_my_account_page() {
         onMyAccountPage().assert_on_my_account_page();
-        getDriver().getPageSource().contains("test12@speroteck.com");
+        assertThat(getDriver().getPageSource(), containsString("test2@speroteck.com"));
     }
 
     @Step

@@ -1,14 +1,17 @@
 package com.mycompany;
 
 import com.mycompany.steps.GlobalSteps;
+import com.mycompany.requirements.Application;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.ManagedPages;
+import net.thucydides.core.annotations.Story;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.junit.runners.ThucydidesRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+@Story(Application.CreateAccount.FromHomePage.class)
 @RunWith(ThucydidesRunner.class)
 public class CreateAccountTest {
 

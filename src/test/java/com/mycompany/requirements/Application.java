@@ -12,31 +12,23 @@ import net.thucydides.core.annotations.Feature;
 public class Application {
     @Feature
     public class Global_Header {
-        public class UsingLinks {
-        }
+        public class UsingLinks {}
     }
 
     @Feature
     public class CreateAccount {
-        public class FromHomePage {
-        }
+        public class FromHomePage {}
     }
 
     @Feature
     public class Checkout {
-        public class AsGuestBundleProduct {
-        }
+        public class AsGuestBundleProduct {}
     }
 
     @Feature
     public class ShopFlow {
-        public class RotatingCarousel {
-        }
-
-        public class QtyOfProductsOnCLP {
-        }
-
-        public class QuickViewPopUp {
-        }
+        public class ShopFlower {}
+        public class QtyOfProductsOnCLP {}
+        public class QuickViewPopUp {}
     }
 }

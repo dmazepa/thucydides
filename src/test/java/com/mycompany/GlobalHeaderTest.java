@@ -1,5 +1,6 @@
 package com.mycompany;
 
+import com.mycompany.requirements.Application;
 import com.mycompany.steps.GlobalSteps;
 import net.thucydides.core.annotations.*;
 import net.thucydides.core.pages.Pages;
@@ -8,6 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+@Story(Application.Global_Header.UsingLinks.class)
 @RunWith(ThucydidesRunner.class)
 public class GlobalHeaderTest {
 

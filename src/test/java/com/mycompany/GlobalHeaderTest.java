@@ -55,10 +55,22 @@ public class GlobalHeaderTest {
     @Test
     public void clicking_on_cart_redirects_to_the_cart_page() {
         //given
-        globalSteps.is_the_home_page();
+        globalSteps.is_the_product_page_id("4325");
+        globalSteps.add_to_cart_product();
         //when
         globalSteps.click_on_cart();
         //then
         globalSteps.assert_on_cart_page();
+    }
+
+    @Test
+    public void on_roll_over_cart_mini_cart_displayed() {
+        //given
+        globalSteps.is_the_product_page_id("4325");
+        globalSteps.add_to_cart_product();
+        //when
+        globalSteps.roll_over_on_cart();
+        //then
+        globalSteps.assert_mini_cart_appears();
     }
 }

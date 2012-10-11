@@ -5,15 +5,6 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
 
-
-/**
- * Created with IntelliJ IDEA.
- * User: dmazepa
- * Date: 01.08.12
- * Time: 14:20
- * To change this template use File | Settings | File Templates.
- */
-
 public class GlobalSteps extends ScenarioSteps {
 
     public GlobalSteps(Pages pages) {
@@ -333,18 +324,26 @@ public class GlobalSteps extends ScenarioSteps {
     @Step
     public void assert_customer_redirects_to_my_account_page() {
         onMyAccountPage().assert_on_my_account_page();
-        getDriver().getPageSource().contains("test2@speroteck.com");
+        getDriver().getPageSource().contains("test12@speroteck.com");
     }
 
+    @Step
     public void click_on_cart() {
         onHomePage().click_on_my_cart();
     }
 
+    @Step
     public void assert_on_cart_page() {
         onCartPage().assert_on_cart_page();
     }
 
+    @Step
     public void assert_mini_cart_appears() {
         onProductDetailPage().assert_mini_cart_appears();
+    }
+
+    @Step
+    public void roll_over_on_cart() {
+
     }
 }

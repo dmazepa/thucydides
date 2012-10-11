@@ -349,4 +349,8 @@ public class GlobalSteps extends ScenarioSteps {
     public void roll_over_on_cart() {
         onGlobalHeaderFooterPage().roll_over_on_cart();
     }
+
+    public void click_on_SignOut_link() {
+        onGlobalHeaderFooterPage().click_sign_out();
+    }
 }

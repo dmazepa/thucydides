@@ -20,6 +20,9 @@ public class GlobalHeaderFooterPage extends PageObject {
     @FindBy(linkText = "Sign In")
     private WebElement signInLink;
 
+    @FindBy(linkText = "Sign Out")
+    private WebElement signOutLink;
+
     @FindBy(linkText = "My Account")
     private WebElement myAccountLink;
 
@@ -39,5 +42,9 @@ public class GlobalHeaderFooterPage extends PageObject {
         Locatable hoverItem = (Locatable) cart;
         Mouse mouse = ((HasInputDevices) getDriver()).getMouse();
         mouse.mouseMove(hoverItem.getCoordinates());
+    }
+
+    public void click_sign_out() {
+        element(signOutLink).click();
     }
 }

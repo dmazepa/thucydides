@@ -50,6 +50,7 @@ public class GlobalHeaderTest {
         globalSteps.click_on_my_account_link();
         //then
         globalSteps.assert_customer_redirects_to_my_account_page();
+        globalSteps.click_on_SignOut_link();
     }
 
     @Test

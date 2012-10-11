@@ -51,4 +51,14 @@ public class GlobalHeaderTest {
         //then
         globalSteps.assert_customer_redirects_to_my_account_page();
     }
+
+    @Test
+    public void clicking_on_cart_redirects_to_the_cart_page() {
+        //given
+        globalSteps.is_the_home_page();
+        //when
+        globalSteps.click_on_cart();
+        //then
+        globalSteps.assert_on_cart_page();
+    }
 }

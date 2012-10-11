@@ -33,6 +33,9 @@ public class HomePage extends PageObject {
     @FindBy(xpath = "//div[@id='slides']/div[2]/div/a[2]")
     private WebElement sliderImage2;
 
+    @FindBy(id = "cartHeader")
+    private WebElement cart;
+
     public void assert_sliding_of_promotional() throws InterruptedException {
         element(buttonPrevSlider).click();
         System.out.println(sliderImage1.getAttribute("style"));
@@ -44,5 +47,9 @@ public class HomePage extends PageObject {
         System.out.println(sliderImage2.getAttribute("style"));
         assertThat(sliderImage1.getAttribute("style"), containsString("none"));
         assertThat(sliderImage2.getAttribute("style"), containsString("block"));
+    }
+
+    public void click_on_my_cart() {
+        element(cart).click();
     }
 }

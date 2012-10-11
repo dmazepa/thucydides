@@ -22,12 +22,19 @@ public class ProductDetailPage extends PageObject {
     @FindBy(xpath = "//button[@class='button btn-cart']")
     private WebElement buttonAddToCart;
 
+    @FindBy(id = "topCartContent")
+    private WebElement blockMiniCart;
+
     public void click_add_to_cart() {
         element(buttonAddToCart).click();
     }
 
     public void openID(String id) {
         String t = System.getProperty("webdriver.base.url");
-        getDriver().get(t + "/dev01/catalog/product/view/id/" + id);
+        getDriver().get(t + "/catalog/product/view/id/" + id);
+    }
+
+    public void assert_mini_cart_appears() {
+        element(blockMiniCart).shouldBeVisible();
     }
 }

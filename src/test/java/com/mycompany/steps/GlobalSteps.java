@@ -335,4 +335,16 @@ public class GlobalSteps extends ScenarioSteps {
         onMyAccountPage().assert_on_my_account_page();
         getDriver().getPageSource().contains("test2@speroteck.com");
     }
+
+    public void click_on_cart() {
+        onHomePage().click_on_my_cart();
+    }
+
+    public void assert_on_cart_page() {
+        onCartPage().assert_on_cart_page();
+    }
+
+    public void assert_mini_cart_appears() {
+        onProductDetailPage().assert_mini_cart_appears();
+    }
 }

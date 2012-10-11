@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+
 /**
  * Created with IntelliJ IDEA.
  * User: dmazepa
@@ -25,5 +28,9 @@ public class CartPage extends PageObject {
 
     public void click_on_checkout_button() {
         element(buttonCheckout).click();
+    }
+
+    public void assert_on_cart_page() {
+        assertThat(getDriver().getCurrentUrl(), is("http://bdohdev.lcgosc.com/dev01/checkout/cart/"));
     }
 }

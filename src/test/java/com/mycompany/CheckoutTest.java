@@ -35,4 +35,14 @@ public class CheckoutTest {
         globalSteps.is_the_order_confirmation_page();
         globalSteps.assert_product_on_confirmation_page();
     }
+
+    @Test
+    public void when_add_to_cart_mini_cart_should_appears() throws InterruptedException {
+        //given
+        globalSteps.is_the_product_page_id("4325");
+        //when
+        globalSteps.add_to_cart_product();
+        //then
+        globalSteps.assert_mini_cart_appears();
+    }
 }

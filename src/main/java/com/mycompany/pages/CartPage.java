@@ -3,8 +3,6 @@ package com.mycompany.pages;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -21,13 +19,6 @@ public class CartPage extends PageObject {
 
     public CartPage(WebDriver driver) {
         super(driver);
-    }
-
-    @FindBy(xpath = "//a[@class='top-link-checkout']")
-    private WebElement buttonCheckout;
-
-    public void click_on_checkout_button() {
-        element(buttonCheckout).click();
     }
 
     public void assert_on_cart_page() {

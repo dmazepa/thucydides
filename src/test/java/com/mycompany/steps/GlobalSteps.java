@@ -46,8 +46,8 @@ public class GlobalSteps extends ScenarioSteps {
         return getPages().currentPageAt(CartPage.class);
     }
 
-    public CheckoutPage onCheckoutPage() {
-        return getPages().currentPageAt(CheckoutPage.class);
+    public OneStepCheckoutPage onOneStepCheckoutPage() {
+        return getPages().currentPageAt(OneStepCheckoutPage.class);
     }
 
     public OrderConfirmationPage onOrderConfirmationPage() {
@@ -142,136 +142,117 @@ public class GlobalSteps extends ScenarioSteps {
     @Step
     public void passing_checkout_process() {
         go_to_checkout_page();
-        choose_checkout_as_guest();
-        click_button_continue();
+        fill_email_field();
         fill_first_name_field();
         fill_last_name_field();
-        fill_email_field();
         fill_address_field();
         fill_city_field();
         select_state();
         fill_postal_code_field();
         fill_telephone_field();
-        click_button_continue1();
-        click_button_continue2();
         click_input_credit_cart();
         fill_cart_name_field();
-        select_cart_type();
         fill_cart_number_field();
         select_month();
         select_year();
         fill_verification_number_field();
-        click_button_continue3();
         click_button_place_order();
+        click_button_submit_order();
+    }
+
+    @Step
+    private void click_button_submit_order() {
+        onOneStepCheckoutPage().click_button_submit_order();
     }
 
     @Step
     public void click_button_place_order() {
-        onCheckoutPage().click_button_place_order();
-    }
-
-    @Step
-    public void click_button_continue3() {
-        onCheckoutPage().click_button_continue3();
+        onOneStepCheckoutPage().click_button_place_order();
     }
 
     @Step
     public void fill_verification_number_field() {
-        onCheckoutPage().fill_verification_number_field();
+        onOneStepCheckoutPage().fill_verification_number_field();
     }
 
     @Step
     public void select_year() {
-        onCheckoutPage().select_year();
+        onOneStepCheckoutPage().select_year();
     }
 
     @Step
     public void select_month() {
-        onCheckoutPage().select_month();
+        onOneStepCheckoutPage().select_month();
     }
 
     @Step
     public void fill_cart_number_field() {
-        onCheckoutPage().fill_cart_number_field();
-    }
-
-    @Step
-    public void select_cart_type() {
-        onCheckoutPage().select_cart_type();
+        onOneStepCheckoutPage().fill_cart_number_field();
     }
 
     @Step
     public void fill_cart_name_field() {
-        onCheckoutPage().fill_cart_name_field();
+        onOneStepCheckoutPage().fill_cart_name_field();
     }
 
     @Step
     public void click_input_credit_cart() {
-        onCheckoutPage().click_on_credit_cart_input();
+        onOneStepCheckoutPage().click_on_credit_cart_input();
     }
 
     @Step
     public void click_button_continue2() {
-        onCheckoutPage().click_on_continue_button2();
+        onOneStepCheckoutPage().click_on_continue_button2();
     }
 
     @Step
     public void click_button_continue1() {
-        onCheckoutPage().click_on_continue_button1();
+        onOneStepCheckoutPage().click_on_continue_button1();
     }
 
     @Step
     public void fill_telephone_field() {
-        onCheckoutPage().fill_telephone_field();
+        onOneStepCheckoutPage().fill_telephone_field();
     }
 
     @Step
     public void fill_postal_code_field() {
-        onCheckoutPage().fill_postal_code_field();
+        onOneStepCheckoutPage().fill_postal_code_field();
     }
 
     @Step
     public void select_state() {
-        onCheckoutPage().select_state();
+        onOneStepCheckoutPage().select_state();
     }
 
     @Step
     public void fill_city_field() {
-        onCheckoutPage().fill_city_field();
+        onOneStepCheckoutPage().fill_city_field();
     }
 
     @Step
     public void fill_address_field() {
-        onCheckoutPage().fill_address_field();
+        onOneStepCheckoutPage().fill_address_field();
     }
 
     @Step
     public void fill_email_field() {
-        onCheckoutPage().fill_email_field();
+        onOneStepCheckoutPage().fill_email_field();
     }
 
     @Step
     public void fill_last_name_field() {
-        onCheckoutPage().fill_last_name_field();
+        onOneStepCheckoutPage().fill_last_name_field();
     }
 
     @Step
-    public void click_button_continue() {
-        onCheckoutPage().click_on_continue_button();
-    }
-
-    @Step
-    public void choose_checkout_as_guest() {
-        onCheckoutPage().choose_checkout_as_guest();
-    }
-
     public void fill_first_name_field() {
-        onCheckoutPage().fill_first_name_field();
+        onOneStepCheckoutPage().fill_first_name_field();
     }
 
     @Step
     public void go_to_checkout_page() {
-        onCartPage().click_on_checkout_button();
+        onGlobalHeaderFooterPage().click_on_checkout_button();
     }
 
     @Step

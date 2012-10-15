@@ -1,10 +1,9 @@
 package com.mycompany;
 
-import com.mycompany.steps.GlobalSteps;
 import com.mycompany.requirements.Application;
+import com.mycompany.steps.GlobalSteps;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.ManagedPages;
-import net.thucydides.core.annotations.Pending;
 import net.thucydides.core.annotations.Story;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.junit.runners.ThucydidesRunner;
@@ -25,11 +24,10 @@ public class CheckoutTest {
     @net.thucydides.core.annotations.Steps
     public GlobalSteps globalSteps;
 
-    @Pending
     @Test
     public void as_guest_i_can_buy_bundle_product() throws InterruptedException {
         //given
-        globalSteps.is_the_product_page_id("91");
+        globalSteps.is_the_product_page_id("51");
         //when
         globalSteps.add_to_cart_product();
         //and

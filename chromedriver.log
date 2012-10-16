@@ -1,0 +1,264 @@
+[0.002][INFO]:      ChromeDriver 23.0.1240.0 C:\chrome\chromedriver.exe
+[1.513][FINE]:      Initializing session with capabilities {
+   "browserName": "chrome",
+   "chrome.switches": [  ],
+   "chromeOptions": {
+      "args": [  ],
+      "extensions": [  ]
+   },
+   "platform": "ANY",
+   "version": ""
+}
+
+[1.515][INFO]:      Launching chrome: "C:\Users\dmazepa\AppData\Local\Google\Chrome\Application\chrome.exe" --enable-logging --log-level=1 --disable-hang-monitor --disable-prompt-on-repost --dom-automation --full-memory-crash-report --no-default-browser-check --no-first-run --disable-background-networking --disable-sync --disable-translate --disable-web-resources --safebrowsing-disable-auto-update --safebrowsing-disable-download-protection --disable-client-side-phishing-detection --disable-component-update --disable-default-apps --ignore-certificate-errors about:blank
+[3.214][INFO]:      Connected to Chrome successfully. Version: 22.0.1229.79
+[3.275][FINE]:      Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e)
+[3.275][FINE]:      Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": {
+      "acceptSslCerts": false,
+      "applicationCacheEnabled": false,
+      "browserConnectionEnabled": false,
+      "browserName": "chrome",
+      "chrome.chromedriverVersion": "23.0.1240.0",
+      "chrome.nativeEvents": false,
+      "cssSelectorsEnabled": true,
+      "databaseEnabled": false,
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "locationContextEnabled": false,
+      "nativeEvents": true,
+      "platform": "windows",
+      "rotatable": false,
+      "takesScreenshot": true,
+      "version": "22.0.1229.79",
+      "webStorageEnabled": true
+   }
+}
+
+[3.367][FINE]:      Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/url) with params {
+   "url": "http://bdohdev.lcgosc.com/dev01/"
+}
+
+[3.367][FINER]:     Waiting for all views to stop loading...
+[3.508][FINER]:     Done waiting for all views to stop loading
+[24.049][FINER]:    Waiting for all views to stop loading...
+[24.057][FINER]:    Done waiting for all views to stop loading
+[24.057][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/url) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[24.064][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/url)
+[24.064][FINER]:    Waiting for all views to stop loading...
+[24.065][FINER]:    Done waiting for all views to stop loading
+[24.125][FINER]:    Waiting for all views to stop loading...
+[24.126][FINER]:    Done waiting for all views to stop loading
+[24.127][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/url) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": "http://bdohdev.lcgosc.com/dev01/"
+}
+
+[24.146][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/execute) with params {
+   "args": [  ],
+   "script": "return (typeof jQuery === 'function')"
+}
+
+[24.146][FINER]:    Waiting for all views to stop loading...
+[24.146][FINER]:    Done waiting for all views to stop loading
+[24.155][FINER]:    Waiting for all views to stop loading...
+[24.156][FINER]:    Done waiting for all views to stop loading
+[24.156][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/execute) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": true
+}
+
+[24.165][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/url)
+[24.165][FINER]:    Waiting for all views to stop loading...
+[24.165][FINER]:    Done waiting for all views to stop loading
+[24.168][FINER]:    Waiting for all views to stop loading...
+[24.168][FINER]:    Done waiting for all views to stop loading
+[24.168][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/url) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": "http://bdohdev.lcgosc.com/dev01/"
+}
+
+[24.176][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/execute) with params {
+   "args": [  ],
+   "script": "return (typeof jQuery === 'function')"
+}
+
+[24.176][FINER]:    Waiting for all views to stop loading...
+[24.178][FINER]:    Done waiting for all views to stop loading
+[24.183][FINER]:    Waiting for all views to stop loading...
+[24.184][FINER]:    Done waiting for all views to stop loading
+[24.184][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/execute) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": true
+}
+
+[24.193][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/url) with params {
+   "url": "http://bdohdev.lcgosc.com/dev01/"
+}
+
+[24.193][FINER]:    Waiting for all views to stop loading...
+[24.193][FINER]:    Done waiting for all views to stop loading
+[34.090][FINER]:    Waiting for all views to stop loading...
+[34.118][FINER]:    Done waiting for all views to stop loading
+[34.119][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/url) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[34.140][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/url)
+[34.140][FINER]:    Waiting for all views to stop loading...
+[34.141][FINER]:    Done waiting for all views to stop loading
+[34.151][FINER]:    Waiting for all views to stop loading...
+[34.153][FINER]:    Done waiting for all views to stop loading
+[34.153][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/url) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": "http://bdohdev.lcgosc.com/dev01/"
+}
+
+[34.161][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/execute) with params {
+   "args": [  ],
+   "script": "return (typeof jQuery === 'function')"
+}
+
+[34.161][FINER]:    Waiting for all views to stop loading...
+[34.161][FINER]:    Done waiting for all views to stop loading
+[34.166][FINER]:    Waiting for all views to stop loading...
+[34.167][FINER]:    Done waiting for all views to stop loading
+[34.167][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/execute) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": true
+}
+
+[34.185][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/url)
+[34.185][FINER]:    Waiting for all views to stop loading...
+[34.186][FINER]:    Done waiting for all views to stop loading
+[34.189][FINER]:    Waiting for all views to stop loading...
+[34.189][FINER]:    Done waiting for all views to stop loading
+[34.189][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/url) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": "http://bdohdev.lcgosc.com/dev01/"
+}
+
+[34.197][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/execute) with params {
+   "args": [  ],
+   "script": "return (typeof jQuery === 'function')"
+}
+
+[34.197][FINER]:    Waiting for all views to stop loading...
+[34.198][FINER]:    Done waiting for all views to stop loading
+[34.203][FINER]:    Waiting for all views to stop loading...
+[34.204][FINER]:    Done waiting for all views to stop loading
+[34.204][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/execute) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": true
+}
+
+[34.216][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/element) with params {
+   "using": "xpath",
+   "value": "//div[@id='slides']/div[2]/div/a[1]"
+}
+
+[34.216][FINER]:    Waiting for all views to stop loading...
+[34.216][FINER]:    Done waiting for all views to stop loading
+[34.259][FINER]:    Waiting for all views to stop loading...
+[34.259][FINER]:    Done waiting for all views to stop loading
+[34.260][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/element) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": {
+      "ELEMENT": ":wdc:1349455511188"
+   }
+}
+
+[34.273][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/element/:wdc:1349455511188/displayed)
+[34.273][FINER]:    Waiting for all views to stop loading...
+[34.273][FINER]:    Done waiting for all views to stop loading
+[34.308][FINER]:    Waiting for all views to stop loading...
+[34.308][FINER]:    Done waiting for all views to stop loading
+[34.308][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/element/:wdc:1349455511188/displayed) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": true
+}
+
+[34.315][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/element/:wdc:1349455511188/attribute/style)
+[34.315][FINER]:    Waiting for all views to stop loading...
+[34.315][FINER]:    Done waiting for all views to stop loading
+[34.392][FINER]:    Waiting for all views to stop loading...
+[34.393][FINER]:    Done waiting for all views to stop loading
+[34.393][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/element/:wdc:1349455511188/attribute/style) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": "position: absolute; top: 0px; left: 940px; z-index: 5; display: none; "
+}
+
+[34.407][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/element) with params {
+   "using": "xpath",
+   "value": "//div[@id='slides']/div[2]/div/a[2]"
+}
+
+[34.407][FINER]:    Waiting for all views to stop loading...
+[34.407][FINER]:    Done waiting for all views to stop loading
+[34.438][FINER]:    Waiting for all views to stop loading...
+[34.438][FINER]:    Done waiting for all views to stop loading
+[34.438][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/element) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": {
+      "ELEMENT": ":wdc:1349455511189"
+   }
+}
+
+[34.447][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/element/:wdc:1349455511189/displayed)
+[34.447][FINER]:    Waiting for all views to stop loading...
+[34.449][FINER]:    Done waiting for all views to stop loading
+[34.485][FINER]:    Waiting for all views to stop loading...
+[34.486][FINER]:    Done waiting for all views to stop loading
+[34.486][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/element/:wdc:1349455511189/displayed) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": true
+}
+
+[34.502][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/element/:wdc:1349455511189/attribute/style)
+[34.503][FINER]:    Waiting for all views to stop loading...
+[34.512][FINER]:    Done waiting for all views to stop loading
+[34.595][FINER]:    Waiting for all views to stop loading...
+[34.596][FINER]:    Done waiting for all views to stop loading
+[34.596][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/element/:wdc:1349455511189/attribute/style) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": "position: absolute; top: 0px; left: 940px; z-index: 0; display: none; "
+}
+
+[37.936][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e/window)
+[37.939][FINE]:     Command finished (/session/71d7557b5a0b542b0072f3c86cab2d3e/window) with response {
+   "sessionId": "71d7557b5a0b542b0072f3c86cab2d3e",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[37.945][FINE]:     Command received (/session/71d7557b5a0b542b0072f3c86cab2d3e)
+[39.403][INFO]:     Chrome shutdown

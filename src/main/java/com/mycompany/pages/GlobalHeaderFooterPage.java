@@ -50,6 +50,6 @@ public class GlobalHeaderFooterPage extends PageObject {
 
     public void click_on_checkout_button() {
         element(buttonCheckout).click();
-        //getDriver().findElement(By.xpath("//button[@class='button btn-proceed-checkout btn-checkout']")).click();
+        getDriver().findElement(By.xpath("//button[@class='button btn-proceed-checkout btn-checkout']")).click();
     }
 }

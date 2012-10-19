@@ -4,7 +4,6 @@ import com.mycompany.requirements.Application;
 import com.mycompany.steps.GlobalSteps;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.ManagedPages;
-import net.thucydides.core.annotations.Pending;
 import net.thucydides.core.annotations.Story;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.junit.runners.ThucydidesRunner;
@@ -46,33 +45,5 @@ public class CheckoutTest {
         globalSteps.add_to_cart_product();
         //then
         globalSteps.assert_mini_cart_appears();
-    }
-
-    @Test
-    @Pending
-    public void as_customer_i_can_buy_configurable_product() throws InterruptedException {
-        //given
-        globalSteps.is_the_product_page_id("51");
-        //when
-        globalSteps.add_to_cart_product();
-        //and
-        globalSteps.passing_checkout_process();
-        //then
-        globalSteps.is_the_order_confirmation_page();
-        globalSteps.assert_product_on_confirmation_page();
-    }
-
-    @Test
-    @Pending
-    public void as_customer_i_can_buy_simple_product() throws InterruptedException {
-        //given
-        globalSteps.is_the_product_page_id("51");
-        //when
-        globalSteps.add_to_cart_product();
-        //and
-        globalSteps.passing_checkout_process();
-        //then
-        globalSteps.is_the_order_confirmation_page();
-        globalSteps.assert_product_on_confirmation_page();
     }
 }

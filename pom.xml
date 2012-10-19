@@ -23,6 +23,11 @@
             <version>${thucydides.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.github.goldin</groupId>
+            <artifactId>sshexec-maven-plugin</artifactId>
+            <version>0.2.5</version>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.6.1</version>
@@ -150,6 +155,25 @@
                         <phase>post-integration-test</phase>
                         <goals>
                             <goal>aggregate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.goldin</groupId>
+                <artifactId>sshexec-maven-plugin</artifactId>
+                <version>0.2.5</version>
+                <executions>
+                    <execution>
+                        <id>update-test-app</id>
+                        <phase>initialize</phase>
+                        <configuration>
+                            <location>scp://vdubyna:dva827827@bdohdev.vpn.lcgosc.com:/var/www/html/dev01</location>
+                            <echoPwd>true</echoPwd>
+                            <command>echo dva827827 | sudo -S svn up</command>
+                        </configuration>
+                        <goals>
+                            <goal>sshexec</goal>
                         </goals>
                     </execution>
                 </executions>

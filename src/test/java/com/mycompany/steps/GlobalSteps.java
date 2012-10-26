@@ -150,14 +150,18 @@ public class GlobalSteps extends ScenarioSteps {
         select_state();
         fill_postal_code_field();
         fill_telephone_field();
+        check_shipment();
         click_input_credit_cart();
-        fill_cart_name_field();
         fill_cart_number_field();
         select_month();
         select_year();
         fill_verification_number_field();
         click_button_place_order();
         click_button_submit_order();
+    }
+    @Step
+    private void check_shipment() {
+        onOneStepCheckoutPage().check_sipment();
     }
 
     @Step
@@ -191,23 +195,8 @@ public class GlobalSteps extends ScenarioSteps {
     }
 
     @Step
-    public void fill_cart_name_field() {
-        onOneStepCheckoutPage().fill_cart_name_field();
-    }
-
-    @Step
     public void click_input_credit_cart() {
         onOneStepCheckoutPage().click_on_credit_cart_input();
-    }
-
-    @Step
-    public void click_button_continue2() {
-        onOneStepCheckoutPage().click_on_continue_button2();
-    }
-
-    @Step
-    public void click_button_continue1() {
-        onOneStepCheckoutPage().click_on_continue_button1();
     }
 
     @Step

@@ -3,6 +3,8 @@ package com.mycompany.pages;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -21,11 +23,15 @@ public class OrderConfirmationPage extends PageObject {
         super(driver);
     }
 
+    @FindBy(xpath = "//p[@class='your-order']")
+    private WebElement order_information;
+
     public void assertOrderConfirmationPage() {
         waitForTitleToAppear("Magento Enterprise Edition");
-        assertThat(getDriver().getCurrentUrl(), is("https://bdohdev.lcgosc.com/dev01/checkout/onepage/success/"));
+        assertThat(getDriver().getCurrentUrl(), is("http://bdohdev.lcgosc.com/dev01/checkout/onepage/success/?___SID=S"));
     }
 
     public void assert_success_messages() {
+        element(order_information).shouldBeVisible();
     }
 }

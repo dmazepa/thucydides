@@ -21,56 +21,53 @@ public class OneStepCheckoutPage extends PageObject {
         super(driver);
     }
 
-    @FindBy(id = "shipping:firstname")
+    @FindBy(id = "billing:firstname")
     private WebElement fieldFirstName;
 
-    @FindBy(id = "shipping:lastname")
+    @FindBy(id = "billing:lastname")
     private WebElement fieldLastName;
 
     @FindBy(id = "billing:email")
     private WebElement fieldEmail;
 
-    @FindBy(id = "shipping:street1")
+    @FindBy(id = "billing:street1")
     private WebElement fieldAddress;
 
-    @FindBy(id = "shipping:city")
+    @FindBy(id = "billing:city")
     private WebElement fieldCity;
 
-    @FindBy(id = "shipping:postcode")
+    @FindBy(id = "billing:postcode")
     private WebElement fieldPostalCode;
 
-    @FindBy(id = "shipping:region_id")
+    @FindBy(id = "billing:region_id")
     private WebElement selectState;
 
-    @FindBy(id = "p_method_ccsave")
+    @FindBy(id = "payment[cc_type]")
     private WebElement inputCreditCart;
 
     @FindBy(id = "p_method_ccsave")
     private WebElement inputCreditCartVisa;
 
-    @FindBy(id = "shipping:telephone")
+    @FindBy(id = "billing:telephone")
     private WebElement fieldTelephone;
 
-    @FindBy(id = "ccsave_cc_cid")
+    @FindBy(id = "authorizenet_cc_cid")
     private WebElement fieldVerificationNumber;
 
-    @FindBy(id = "ccsave_expiration")
+    @FindBy(id = "authorizenet_expiration")
     private WebElement selectMonth;
 
-    @FindBy(id = "ccsave_expiration_yr")
+    @FindBy(id = "authorizenet_expiration_yr")
     private WebElement selectYear;
 
-    @FindBy(id = "ccsave_cc_number")
+    @FindBy(id = "authorizenet_cc_number")
     private WebElement fieldCartNumber;
 
     @FindBy(id = "ccsave_cc_owner")
     private WebElement fieldCartName;
 
-    @FindBy(xpath = "//div[@id='billing-buttons-container']/button")
-    private WebElement buttonContinue1;
-
-    @FindBy(xpath = "//div[@id='shipping-method-buttons-container']/button")
-    private WebElement buttonContinue2;
+    @FindBy(xpath = "//dl[@class='shipment-methods']//input")
+    private WebElement shipment;
 
     @FindBy(xpath = "//div[@id='payment-buttons-container']/button")
     private WebElement buttonContinue3;
@@ -113,14 +110,6 @@ public class OneStepCheckoutPage extends PageObject {
         element(fieldTelephone).type("1234567890");
     }
 
-    public void click_on_continue_button1() {
-        element(buttonContinue1).click();
-    }
-
-    public void click_on_continue_button2() {
-        element(buttonContinue2).click();
-    }
-
     public void click_on_credit_cart_input() {
         element(inputCreditCart).waitUntilVisible();
         element(inputCreditCart).click();
@@ -128,16 +117,12 @@ public class OneStepCheckoutPage extends PageObject {
         getDriver().findElement(By.xpath("//input[@data-name='Visa']")).click();
     }
 
-    public void fill_cart_name_field() {
-        element(fieldCartName).type("Visa");
-    }
-
     public void fill_cart_number_field() {
         element(fieldCartNumber).type("4111111111111111");
     }
 
     public void select_month() {
-        element(selectMonth).selectByVisibleText("03 - March");
+        element(selectMonth).selectByValue("3");
     }
 
     public void fill_verification_number_field() {
@@ -145,7 +130,7 @@ public class OneStepCheckoutPage extends PageObject {
     }
 
     public void select_year() {
-        element(selectYear).selectByVisibleText("2022");
+        element(selectYear).selectByValue("2022");
     }
 
     public void click_button_place_order() {
@@ -154,5 +139,9 @@ public class OneStepCheckoutPage extends PageObject {
 
     public void click_button_submit_order() {
         element(buttonSubmitOrder).click();
+    }
+
+    public void check_sipment() {
+        element(shipment).click();
     }
 }

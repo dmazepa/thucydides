@@ -21,7 +21,7 @@ public class CLPage extends PageObject {
     @FindBy(xpath = "//div[@class='limiter']/select")
     private WebElement selectItemsPerPage;
 
-    @FindBy(xpath = "//a[@class='product-image']/img")
+    @FindBy(xpath = "//li[2]//a[@class='product-image']/img")
     private WebElement firstProductImage;
 
     @FindBy(xpath = "//a[@class='quick-view']")

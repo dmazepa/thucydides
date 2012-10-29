@@ -138,6 +138,7 @@ public class OneStepCheckoutPage extends PageObject {
     }
 
     public void click_button_submit_order() {
+        element(buttonSubmitOrder).waitUntilVisible();
         element(buttonSubmitOrder).click();
     }
 

@@ -144,5 +144,6 @@ public class OneStepCheckoutPage extends PageObject {
 
     public void check_sipment() {
         element(shipment).click();
+        element(shipment).click();
     }
 }

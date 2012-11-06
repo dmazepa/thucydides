@@ -152,6 +152,7 @@ public class GlobalSteps extends ScenarioSteps {
         fill_telephone_field();
         check_shipment();
         click_input_credit_cart();
+        fill_cart_name();
         fill_cart_number_field();
         select_month();
         select_year();
@@ -159,6 +160,11 @@ public class GlobalSteps extends ScenarioSteps {
         click_button_place_order();
         click_button_submit_order();
     }
+    @Step
+    private void fill_cart_name() {
+        onOneStepCheckoutPage().fill_cart_name();
+    }
+
     @Step
     private void check_shipment() {
         onOneStepCheckoutPage().check_sipment();

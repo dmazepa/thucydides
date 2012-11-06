@@ -72,6 +72,9 @@ public class OneStepCheckoutPage extends PageObject {
     @FindBy(xpath = "//div[@id='payment-buttons-container']/button")
     private WebElement buttonContinue3;
 
+    @FindBy(xpath = "//input[@id='authorizenet_cc_owner']")
+    private WebElement cart_name;
+
     @FindBy(id = "onestepcheckout-place-order")
     private WebElement buttonPlaceOrder;
 
@@ -145,5 +148,9 @@ public class OneStepCheckoutPage extends PageObject {
     public void check_sipment() {
         element(shipment).waitUntilVisible();
         element(shipment).click();
+    }
+
+    public void fill_cart_name() {
+        element(cart_name).type("visa");
     }
 }

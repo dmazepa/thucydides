@@ -149,7 +149,7 @@
                         <id>thucydides-reports</id>
                         <phase>post-integration-test</phase>
                         <goals>
-                            <goal>aggregate</goal>
+                               <goal>aggregate</goal>
                         </goals>
                     </execution>
                 </executions>
